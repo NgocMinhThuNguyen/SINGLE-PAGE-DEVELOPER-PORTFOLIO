@@ -13,8 +13,8 @@
 <body>
 
   <header>
-    <a href="index.html" aria-label="Adamkeyes - Home">adamkeyes</a>
-    <ul class="social-media">
+    <a href="index.html" aria-label="Adamkeyes - Home" class="logo">adamkeyes</a>
+    <ul class="social-media flex">
       <li>
         <a href="#" aria-label="Github">
           <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="25" height="24"><path fill="#FFF" fill-rule="evenodd" d="M12.304 0C5.506 0 0 5.506 0 12.304c0 5.444 3.522 10.042 8.413 11.672.615.108.845-.261.845-.584 0-.292-.015-1.261-.015-2.291-3.091.569-3.891-.754-4.137-1.446-.138-.354-.738-1.446-1.261-1.738-.43-.23-1.046-.8-.016-.815.97-.015 1.661.892 1.892 1.261 1.107 1.86 2.876 1.338 3.584 1.015.107-.8.43-1.338.784-1.646-2.738-.307-5.598-1.368-5.598-6.074 0-1.338.477-2.446 1.26-3.307-.122-.308-.553-1.569.124-3.26 0 0 1.03-.323 3.383 1.26.985-.276 2.03-.415 3.076-.415 1.046 0 2.092.139 3.076.416 2.353-1.6 3.384-1.261 3.384-1.261.676 1.691.246 2.952.123 3.26.784.861 1.26 1.953 1.26 3.307 0 4.721-2.875 5.767-5.613 6.074.446.385.83 1.123.83 2.277 0 1.645-.015 2.968-.015 3.383 0 .323.231.708.846.584a12.324 12.324 0 0 0 8.382-11.672C24.607 5.506 19.101 0 12.304 0Z"/></svg>
@@ -44,187 +44,191 @@
 
   <main>
     <!-- Intro starts -->
-    <section class="intro">
-      <h1>Nice to meet you! I'm Adam Keyes.</h1>
-      <p>Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
-      <a href="#contact-form">Contact Me</a>
+    <section class="intro flex flex-column">
       <picture>
         <source srcset="./assets/images/image-profile-tablet.webp" media="(min-width: 48rem)">
         <source srcset="./assets/images/image-profile-desktop.webp" media="(min-width: 90rem)">
 
         <img src="./assets/images/image-profile-mobile.webp" alt="Adam Keyes">
       </picture>
+      <h1 class="heading-1">Nice to meet you! I'm <span>Adam Keyes</span>.</h1>
+      <p class="text">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
+      <a href="#contact-form" class="text text-bold">Contact Me</a>
     </section>
      <!-- Intro ends -->
 
     <!-- Skills starts -->
-    <ul role="list">
+    <ul role="list" class="skills">
       <li>
         <h2>HTML</h2>
-        <h3>4 Years Experience</h3>
+        <h3 class="text">4 Years Experience</h3>
       </li>
       <li>
         <h2>CSS</h2>
-        <h3>4 Years Experience</h3>
+        <h3 class="text">4 Years Experience</h3>
       </li>
       <li>
         <h2>JavaScript</h2>
-        <h3>4 Years Experience</h3>
+        <h3 class="text">4 Years Experience</h3>
       </li>
       <li>
         <h2>Accessibility</h2>
-        <h3>3 Years Experience</h3>
+        <h3 class="text">3 Years Experience</h3>
       </li>
       <li>
         <h2>React</h2>
-        <h3>3 Years Experience</h3>
+        <h3 class="text">3 Years Experience</h3>
       </li>
       <li>
         <h2>Sass</h2>
-        <h3>3 Years Experience</h3>
+        <h3 class="text">3 Years Experience</h3>
       </li>
     </ul>
     <!-- Skills ends -->
 
     <!-- Project starts -->
-    <section class="projects-conatainer">
-      <h2>Projects</h2>
-      <a href="#contact-form">Contact Me</a>
-
-      <div class="project-item" id="portfolio">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-1-large.webp" media="(min-width: 90rem)">
-          <img src="./assets/images/thumbnail-project-1-small.webp" alt="">
-        </picture>
-
-        <h3>Design portfolio</h3>
-
-        <ul class="used-skills">
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
-
-        <div class="demo">
-          <a href="#" id="demo-1" aria-labelledby="demo-1 portfolio">View Project</a>
-          <a href="#" id="repo-1" aria-labelledby="repo-1 portfolio">View code</a>
-        </div>
+    <section class="projects">
+      <div class="flex">
+        <h2 class="heading-1">Projects</h2>
+        <a href="#contact-form" class="text text-bold">Contact Me</a>
       </div>
-
-      <div class="project-item" id="landing-page">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-2-large.webp" media="(min-width: 90rem)">
-          <img src="./assets/images/thumbnail-project-2-small.webp" alt="">
-        </picture>
-
-        <h3>E-learning landing page</h3>
-
-        <ul class="used-skills">
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
-
-        <div class="demo">
-          <a href="#" id="demo-2" aria-labelledby="demo-2 landing-page">View Project</a>
-          <a href="#" id="repo-2" aria-labelledby="repo-2 landing-page">View code</a>
+    
+      <div class="project-container">
+        <div class="project-item flex flex-column" id="portfolio">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-1-large.webp" media="(min-width: 90rem)">
+            <img src="./assets/images/thumbnail-project-1-small.webp" alt="">
+          </picture>
+  
+          <h3>Design portfolio</h3>
+  
+          <ul class="used-skills text flex">
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+  
+          <div class="demo flex">
+            <a href="#" id="demo-1" class="text text-bold" aria-labelledby="demo-1 portfolio">View Project</a>
+            <a href="#" id="repo-1" class="text text-bold" aria-labelledby="repo-1 portfolio">View code</a>
+          </div>
         </div>
-      </div>
-
-      <div class="project-item" id="web-app-1">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-3-large.webp" media="(min-width: 90rem)">
-          <img src="./assets/images/thumbnail-project-3-small.webp" alt="">
-        </picture>
-
-        <h3>Todo web app</h3>
-
-        <ul class="used-skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-
-        <div class="demo">
-          <a href="#" id="demo-3" aria-labelledby="demo-3 web-app-1">View Project</a>
-          <a href="#" id="repo-3" aria-labelledby="repo-3 web-app-1">View code</a>
+  
+        <div class="project-item flex flex-column" id="landing-page">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-2-large.webp" media="(min-width: 90rem)">
+            <img src="./assets/images/thumbnail-project-2-small.webp" alt="">
+          </picture>
+  
+          <h3>E-learning landing page</h3>
+  
+          <ul class="used-skills text flex">
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+  
+          <div class="demo flex">
+            <a href="#" id="demo-2" class="text text-bold" aria-labelledby="demo-2 landing-page">View Project</a>
+            <a href="#" id="repo-2" class="text text-bold" aria-labelledby="repo-2 landing-page">View code</a>
+          </div>
         </div>
-      </div>
-
-      <div class="project-item" id="web-app-2">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-4-large.webp" media="(min-width: 90rem)">
-          <img src="./assets/images/thumbnail-project-4-small.webp" alt="">
-        </picture>
-
-        <h3>Entertainment web app</h3>
-
-        <ul class="used-skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-
-        <div class="demo">
-          <a href="#" id="demo-4" aria-labelledby="demo-4 web-app-2">View Project</a>
-          <a href="#" id="repo-4" aria-labelledby="repo-4 web-app-2">View code</a>
+  
+        <div class="project-item flex flex-column" id="web-app-1">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-3-large.webp" media="(min-width: 90rem)">
+            <img src="./assets/images/thumbnail-project-3-small.webp" alt="">
+          </picture>
+  
+          <h3>Todo web app</h3>
+  
+          <ul class="used-skills text flex">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+  
+          <div class="demo flex">
+            <a href="#" id="demo-3" class="text text-bold" aria-labelledby="demo-3 web-app-1">View Project</a>
+            <a href="#" id="repo-3" class="text text-bold" aria-labelledby="repo-3 web-app-1">View code</a>
+          </div>
         </div>
-      </div>
-
-      <div class="project-item" id="memory-game">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-5-large.webp" media="(min-width: 90rem)">
-          <img src="./assets/images/thumbnail-project-5-small.webp" alt="">
-        </picture>
-
-        <h3>Memory Game</h3>
-
-        <ul class="used-skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-
-        <div class="demo">
-          <a href="#" id="demo-5" aria-labelledby="demo-5 memory-game">View Project</a>
-          <a href="#" id="repo-5" aria-labelledby="repo-5 memory-game">View code</a>
+  
+        <div class="project-item flex flex-column" id="web-app-2">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-4-large.webp" media="(min-width: 90rem)">
+            <img src="./assets/images/thumbnail-project-4-small.webp" alt="">
+          </picture>
+  
+          <h3>Entertainment web app</h3>
+  
+          <ul class="used-skills text flex">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+  
+          <div class="demo flex">
+            <a href="#" id="demo-4" class="text text-bold" aria-labelledby="demo-4 web-app-2">View Project</a>
+            <a href="#" id="repo-4" class="text text-bold" aria-labelledby="repo-4 web-app-2">View code</a>
+          </div>
         </div>
-      </div>
-
-      <div class="project-item" id="gallery-showcase">
-        <picture>
-          <source srcset="./assets/images/thumbnail-project-6-large.webp" media="(min-width: 90rem)">
-          <img src="./assets/images/thumbnail-project-6-small.webp" alt="">
-        </picture>
-
-        <h3>Art gallery showcase</h3>
-
-        <ul class="used-skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-
-        <div class="demo">
-          <a href="#" id="demo-6" aria-labelledby="demo-6 gallery-showcase">View Project</a>
-          <a href="#" id="repo-6" aria-labelledby="repo-6 gallery-showcase">View code</a>
+  
+        <div class="project-item flex flex-column" id="memory-game">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-5-large.webp" media="(min-width: 90rem)">
+            <img src="./assets/images/thumbnail-project-5-small.webp" alt="">
+          </picture>
+  
+          <h3>Memory Game</h3>
+  
+          <ul class="used-skills text flex">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+  
+          <div class="demo flex">
+            <a href="#" id="demo-5" class="text text-bold" aria-labelledby="demo-5 memory-game">View Project</a>
+            <a href="#" id="repo-5" class="text text-bold" aria-labelledby="repo-5 memory-game">View code</a>
+          </div>
+        </div>
+  
+        <div class="project-item flex flex-column" id="gallery-showcase">
+          <picture>
+            <source srcset="./assets/images/thumbnail-project-6-large.webp" media="(min-width: 90rem)">
+            <img src="./assets/images/thumbnail-project-6-small.webp" alt="">
+          </picture>
+  
+          <h3>Art gallery showcase</h3>
+  
+          <ul class="used-skills text flex">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+  
+          <div class="demo flex">
+            <a href="#" id="demo-6" class="text text-bold" aria-labelledby="demo-6 gallery-showcase">View Project</a>
+            <a href="#" id="repo-6" class="text text-bold" aria-labelledby="repo-6 gallery-showcase">View code</a>
+          </div>
         </div>
       </div>
     </section>
      <!-- Project ends -->
 
     <!-- Form starts -->
-    <div class="form-container">
-      <h2>Contact</h2>
-      <p>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+    <div class="form-container flex flex-column">
+      <h2 class="heading-1">Contact</h2>
+      <p class="text">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
 
-      <form action="#" id="contact-form" novalidate>
-        <label for="user-name">Name</label>
-        <input type="text" id="user-name" name="user-name" >
+      <form action="#" id="contact-form" class="form flex flex-column" novalidate>
+        <!-- <label for="user-name">Name</label> -->
+        <input type="text" id="user-name" name="user-name" placeholder="Name">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" >
+        <!-- <label for="email">Email</label> -->
+        <input type="email" id="email" name="email" placeholder="Email">
 
-        <label for="message">Name</label>
-        <textarea id="message" name="message" ></textarea>
+        <!-- <label for="message">Message</label> -->
+        <textarea id="message" name="message"  placeholder="Message"></textarea>
 
         <button>Send Message</button>
       </form>
@@ -234,7 +238,7 @@
 
   <footer>
     <a href="index.html" aria-label="Adamkeyes - Home">adamkeyes</a>
-    <ul class="social-media">
+    <ul class="social-media flex">
       <li>
         <a href="#" aria-label="Github">
           <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="25" height="24"><path fill="#FFF" fill-rule="evenodd" d="M12.304 0C5.506 0 0 5.506 0 12.304c0 5.444 3.522 10.042 8.413 11.672.615.108.845-.261.845-.584 0-.292-.015-1.261-.015-2.291-3.091.569-3.891-.754-4.137-1.446-.138-.354-.738-1.446-1.261-1.738-.43-.23-1.046-.8-.016-.815.97-.015 1.661.892 1.892 1.261 1.107 1.86 2.876 1.338 3.584 1.015.107-.8.43-1.338.784-1.646-2.738-.307-5.598-1.368-5.598-6.074 0-1.338.477-2.446 1.26-3.307-.122-.308-.553-1.569.124-3.26 0 0 1.03-.323 3.383 1.26.985-.276 2.03-.415 3.076-.415 1.046 0 2.092.139 3.076.416 2.353-1.6 3.384-1.261 3.384-1.261.676 1.691.246 2.952.123 3.26.784.861 1.26 1.953 1.26 3.307 0 4.721-2.875 5.767-5.613 6.074.446.385.83 1.123.83 2.277 0 1.645-.015 2.968-.015 3.383 0 .323.231.708.846.584a12.324 12.324 0 0 0 8.382-11.672C24.607 5.506 19.101 0 12.304 0Z"/></svg>
@@ -242,7 +246,7 @@
       </li>
 
       <li>
-        <a href="" aria-label="Frontend Mentor">
+        <a href="#" aria-label="Frontend Mentor">
           <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="23"><path fill="#FFF" d="M13.084.23a.751.751 0 0 0-.736.75v14.267a.75.75 0 1 0 1.5 0V.98a.75.75 0 0 0-.763-.75ZM24.44 4.504a.752.752 0 0 0-.284.064l-6.44 2.875a.752.752 0 0 0 0 1.37l6.44 2.884a.75.75 0 0 0 .612-1.369L19.861 8.13l4.907-2.191a.753.753 0 0 0 .38-.99.752.752 0 0 0-.708-.444ZM1.371 9.663a.752.752 0 0 0-.74.938C2.41 17.447 8.603 22.23 15.685 22.23a.75.75 0 1 0 0-1.501A14.053 14.053 0 0 1 2.083 10.225a.75.75 0 0 0-.712-.561v-.001Z"/></svg>
         </a>
       </li>

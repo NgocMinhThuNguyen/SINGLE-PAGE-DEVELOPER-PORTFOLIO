@@ -110,7 +110,7 @@ body, header, main, footer, .flex {
   display: flex;
 }
 
-body, header, main, footer, .flex-column {
+body, main, footer, .flex-column {
   flex-direction: column;
 }
 
@@ -119,11 +119,13 @@ body {
   color: var(--text);
   text-align: center;
 
-  padding: 1.25rem 1rem;
+  padding-top: 1.25rem;
   justify-content: center;
-  gap: 2.5rem;
 
   background-color: var(--main-bg);
+  background-image: url('./assets/images/pattern-rings.svg');
+  background-repeat: no-repeat;
+  background-position: left -300px top 90px;
 }
 
 .text {
@@ -148,71 +150,6 @@ body {
   color: var(--heading);
 }
 
-.text-bold, .project-item h3, .used-skills {
-  text-transform: uppercase;
-}
-
-a {
-  color: var(--heading);
-}
-
-/*--------------- 
-** LAYOUT DESIGN */
-header {
-  align-items: center;
-  gap: 1.125rem;
-  margin-bottom: 280px;
-
-  position: relative;
-  z-index: 3;
-}
-
-.social-media {
-  gap: 1.5rem;
-}
-
-.social-media a:hover path {
-  fill: var(--underline);
-}
-
-main {
-  gap: 80px;
-}
-
-.intro {
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-}
-
-.intro * {
-  z-index: 2;
-}
-
-.intro picture {
-  max-width: 200px;
-
-  position: absolute;
-  top: -460px;  
-  z-index: 1;
-}
-
-h1 span {
-  border-bottom: 4px solid var(--underline);
-}
-
-.skills {
-  padding: 2.5rem 0;
-  border-top: 1px solid var(--heading);
-  border-bottom: 1px solid var(--heading);
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
 .skills h2 {
   font-size: 2rem;
   font-weight: 700;
@@ -222,137 +159,48 @@ h1 span {
   color: var(--heading);
 }
 
-.projects > div {
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
-}
 
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(337px, 1fr));
-  row-gap: 3.75rem;
-  column-gap: 1.875rem;
-
-  text-align: left;
-}
-
-.project-item {
-  gap: 1.125rem;
-
-}
-
-.project-item h3 {
+.project-name {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
 }
 
-.used-skills {
-  gap: 1.125rem;
-}
-
-.demo {
-  gap: 2rem;
-}
-
-.form-container {
-  padding: 3.75rem 0;
-  gap: 1.25rem;
-
-  border-bottom: 1px solid var(--heading);
-}
-
-.form {
-  gap: 1rem;
-}
-
-.form * {
-  padding: 1.125rem 1.5rem;
-  background-color: transparent;
-  border-color: transparent;
-  border-bottom: 1px solid var(--heading);
+.text-bold, .project-item h3, .used-skills {
   text-transform: uppercase;
+}
+
+a {
   color: var(--heading);
 }
 
-.form *::placeholder {
-  opacity: .5;
+.social-media a:hover .icon {
+  fill: var(--underline);
 }
 
-.form button {
-  padding: .625rem 0;
-  border-bottom-color: var(--underline);
-  align-self: flex-end;
+/*--------------- 
+** LAYOUT DESIGN */
+header, .header-bottom {
+  flex-flow: column nowrap;
+  gap: 1.25rem;
 }
 
-footer {
-  align-items: center;
-  gap: 1.125rem
-}
-
-footer p a {
-  color: var(--underline);
+.social-media {
+  gap: 1rem;
+  align-self: center;
 }
 
 @media (min-width: 48rem) {
-  body {
-    padding: 2rem;
-  }
-
-  .heading-1 {
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    letter-spacing: -2.045px;
-  }
-
-  .text {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5.625rem;
-  }
-
-  .intro {
-    align-items: flex-start;
-    text-align: left;
-    gap: 2.25rem; 
-
-    padding-right: 17rem;
-  }
-
-  .intro picture {
-    right: -1.875rem;
-    top: -190px;
-
-    width: 45%;
-  }
-
-  .skills {
-    text-align: left;
-  }
-
-  .skills h2 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    letter-spacing: -1.5px;
-  }
-
-  .form-container {
-    padding: 3.75rem 10rem;
-  }
-
-  footer {
+  header, .header-bottom {
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 5rem;
   }
 
   .attribution {
     flex-basis: 100%;
   }
+}
+
+@media (min-width: 90rem) {
+
 }

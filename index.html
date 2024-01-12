@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="margin">
     <a href="index.html" aria-label="Adamkeyes - Home" class="logo">adamkeyes</a>
     <ul class="social-media flex">
       <li>
@@ -44,7 +44,7 @@
 
   <main>
     <!-- Intro starts -->
-    <section class="intro flex flex-column">
+    <section class="intro">
       <div class="avatar-container">
         <picture>
           <source srcset="./assets/images/image-profile-tablet.webp" media="(min-width: 48rem)">
@@ -52,10 +52,12 @@
   
           <img src="./assets/images/image-profile-mobile.webp" alt="Adam Keyes">
         </picture>
-        <img src="./assets/images/pattern-circle.svg" alt="" class="circle">
+        <div class="circle">
+          <!-- <img src="assets/images/pattern-circle.svg" alt=""> -->
+        </div>
       </div>
 
-      <div class="intro-content">
+      <div class="intro-content margin flex flex-column">
         <h1 class="heading-1">Nice to meet you! I'm <span>Adam Keyes</span>.</h1>
         <p class="text">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
         <a href="#contact-form" class="text text-bold contact-btn">Contact Me</a>
@@ -64,7 +66,7 @@
      <!-- Intro ends -->
 
     <!-- Skills starts -->
-    <ul role="list" class="skills">
+    <ul role="list" class="skills margin line-decor">
       <li>
         <h2>HTML</h2>
         <h3 class="text">4 Years Experience</h3>
@@ -93,8 +95,8 @@
     <!-- Skills ends -->
 
     <!-- Project starts -->
-    <section class="projects">
-      <div class="flex">
+    <section class="projects margin">
+      <div class="project-heading flex">
         <h2 class="heading-1">Projects</h2>
         <a href="#contact-form" class="text text-bold">Contact Me</a>
       </div>
@@ -231,14 +233,14 @@
       </div>
     
       <form action="#" id="contact-form" class="form flex flex-column" novalidate>
-        <!-- <label for="user-name">Name</label> -->
+        <label for="user-name"></label>
         <input type="text" id="user-name" name="user-name" placeholder="Name">
 
-        <!-- <label for="email">Email</label> -->
+        <label for="email"></label>
         <input type="email" id="email" name="email" placeholder="Email">
 
-        <!-- <label for="message">Message</label> -->
-        <textarea id="message" name="message"  placeholder="Message"></textarea>
+        <label for="message"></label>
+        <textarea id="message" name="message"  placeholder="Message" rows="5" cols="33"></textarea>
 
         <button>Send Message</button>
       </form>

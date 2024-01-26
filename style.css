@@ -147,7 +147,7 @@ body {
 .heading-1 {
   font-size: 2.5rem;
   font-weight: 700;
-  line-height: 2.5rem;
+  line-height: 100%;
   letter-spacing: -1.136px;
   color: var(--heading);
 }
@@ -195,7 +195,7 @@ header, .header-bottom {
 }
 
 .social-media {
-  gap: 1rem;
+  gap: 1.5rem;
   align-self: center;
 }
 
@@ -216,7 +216,7 @@ header, .header-bottom {
 }
 
 .avatar-container picture {
-  max-width: 50%;
+  max-width: 55%;
   justify-self: center;
 }
 
@@ -326,7 +326,6 @@ input, textarea {
 @media (min-width: 48rem) {
   .heading-1 {
     font-size: 4.5rem;
-    line-height: 4.5rem;
     letter-spacing: -2.5px;
   }
 
@@ -408,8 +407,13 @@ input, textarea {
     z-index: 2;
 
     align-items: flex-start;
+    gap: 2.125rem;
 
     margin-right: 0;
+  }
+
+  .intro-content h1 {
+    margin-bottom: 1.625rem;
   }
 
   .project-container {
@@ -434,21 +438,34 @@ input, textarea {
 }
 
 @media (min-width: 90rem) {
-  .margin {
-    margin-inline: 170px;
+  .heading-1 {
+    font-size: 5.5rem;
+    letter-spacing: -2.5px;
   }
 
-  .circle {
-    place-self: center;
-    transform: translate(-30px, 150px);
-    background-position: bottom left;
+  .margin {
+    margin-inline: 165px;
+  }
+
+  .intro {
+    grid-template-columns: 1.2fr 0.5fr 1fr;
+  }
+
+  .intro-content {
+    margin-right: 0;
+    gap: 4rem;
+  }
+
+  .intro-content p {
+    padding-right: 220px;
   }
 
   .avatar-container {
-    padding-right: 120px;
+    padding-right: 145px;
   }
 
-  .avatar-container picture{
-    max-width: 50%;
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
   }
+
 }

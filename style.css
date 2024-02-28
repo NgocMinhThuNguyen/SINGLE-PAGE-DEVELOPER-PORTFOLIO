@@ -175,6 +175,11 @@ a {
   color: var(--heading);
 }
 
+.form button:hover, a:hover {
+  color: var(--underline);
+  cursor: pointer;
+}
+
 .social-media a:hover .icon {
   fill: var(--underline);
 }
@@ -298,6 +303,7 @@ footer {
 
 .form * {
   text-transform: uppercase;
+  color: var(--heading);
 }
 
 input, textarea {
@@ -308,13 +314,18 @@ input, textarea {
   padding: 1rem;
 }
 
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--underline);
+  background-color: transparent;
+}
+
 .form button {
   background-color: transparent;
   border: transparent;
   border-bottom: 2px solid var(--underline);
   padding-bottom: .75rem;
 
-  color: var(--heading);
   align-self: flex-end;
 }
 
@@ -443,7 +454,7 @@ input, textarea {
     letter-spacing: -2.5px;
   }
 
-  .margin {
+  .margin, .header-bottom {
     margin-inline: 165px;
   }
 
@@ -468,4 +479,42 @@ input, textarea {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .project-item {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project-item picture {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .demo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .project-item picture:hover {
+    opacity: .4;
+    cursor: pointer;
+  }
+
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-intro {
+    text-align: left;
+    grid-column: 1/2;
+    padding: 50px;
+  }
+
+  form {
+    grid-column: 2/3;
+  }
 }

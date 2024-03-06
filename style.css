@@ -1,5 +1,4 @@
-/*-------------------- 
-**   RESET ---------*/
+/* RESET */
 /* This reset is a copied from Andy Bell reset css */
 
 /* Box sizing rules */
@@ -95,8 +94,7 @@ select {
   }
 }
 
-/*--------------------------
-** DELCARE VARIABLES ------*/
+/* DELCARE VARIABLES */
 :root {
   --main-bg: #151515;
   --sub-bg: #242424;
@@ -183,8 +181,7 @@ a {
 .social-media a:hover .icon {
   fill: var(--underline);
 }
-/*--------------- 
-** LAYOUT DESIGN */
+/* LAYOUT DESIGN */
 .margin {
   margin-inline: 1rem;
 }
@@ -487,6 +484,7 @@ input:focus, textarea:focus {
   .project-item picture {
     grid-column: 1/2;
     grid-row: 1/2;
+    z-index: 3;
   }
 
   .demo {
@@ -495,12 +493,12 @@ input:focus, textarea:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    z-index: 2;
+    background-color: var(--sub-bg);
   }
 
   .project-item picture:hover {
-    opacity: .4;
-    cursor: pointer;
+    z-index: 1;
   }
 
   .form-container {
